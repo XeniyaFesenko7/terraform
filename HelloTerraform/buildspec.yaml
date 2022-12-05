@@ -1,4 +1,3 @@
-
 version: 0.2
 
 phases:
@@ -20,10 +19,12 @@ phases:
       - terraform init
   build:
     commands:
-#       - terraform $TF_COMMAND -auto-approve
-      - terraform destroy --auto-approve  
+#      - terraform $TF_COMMAND -auto-approve
+#     to build an infrastructure use - terraform apply
+      - terraform apply --auto-approve  
+#     to destroy an infrastructure use - terraform destroy
+#     - terraform destroy --auto-approve
 
   post_build:
     commands:
       - echo terraform $TF_COMMAND completed on '$date'
-
