@@ -60,8 +60,8 @@ resource "aws_s3_bucket_versioning" "versioning_example" {
 terraform {
   backend "s3" {
     encrypt = true
-    bucket= "tf-statefile-demo1"
-    dynamodb_table = "tf-s3-app-lock"
+    bucket= "bah-tf-statefile-demo"
+    dynamodb_table = "bah-tf-s3-app-lock"
     key = "dev-cdr/terraformstate"
     region = "us-gov-west-1"
     
@@ -70,8 +70,8 @@ terraform {
 
 
 
-resource "aws_ecr_repository" "xeniya-tf-ecr" {
-  name                 = "terraform-docker"
+resource "aws_ecr_repository" "bah-tf-ecr-demo" {
+  name                 = "bah-tf-ecr-demo"
   image_tag_mutability = "MUTABLE"
 
   image_scanning_configuration {
