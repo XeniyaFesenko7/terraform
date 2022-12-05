@@ -11,13 +11,13 @@ terraform {
 provider "aws" {
   # access_key = "$"
   # secret_key = "$"
-  region     = "us-east-1"
+  region     = "us-gov-west-1"
 }
 
 
 #####################################  Create s3 Bucket 
 resource "aws_s3_bucket" "state_backup" {
-  bucket = "xeniya-arvind-demo-bucket"
+  bucket = "bah-tf-demo-bucket"
   force_destroy = true
   lifecycle {
     prevent_destroy = false
@@ -63,7 +63,7 @@ terraform {
     bucket= "tf-statefile-demo1"
     dynamodb_table = "tf-s3-app-lock"
     key = "dev-cdr/terraformstate"
-    region = "us-east-1"
+    region = "us-gov-west-1"
     
   }
 } 
