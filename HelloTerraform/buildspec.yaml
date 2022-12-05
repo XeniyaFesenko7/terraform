@@ -21,9 +21,9 @@ phases:
     commands:
 #      - terraform $TF_COMMAND -auto-approve
 #     to build an infrastructure use - terraform apply
-      - terraform apply --auto-approve  
+#      - terraform apply --auto-approve  
 #     to destroy an infrastructure use - terraform destroy
-#     - terraform destroy --auto-approve
+       - terraform destroy --auto-approve
 
   post_build:
     commands:
