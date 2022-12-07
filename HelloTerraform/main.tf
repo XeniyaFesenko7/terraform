@@ -71,10 +71,11 @@ terraform {
 
 
 resource "aws_ecr_repository" "bah-tf-ecr-demo" {
-  name                 = "bah-tf-ecr-demo-new-bucket"
+  name                 = "bah-tf-ecr-demo"
   image_tag_mutability = "MUTABLE"
 
   image_scanning_configuration {
-    scan_on_push = true  }
+    scan_on_push = true
+  }
 }
 
