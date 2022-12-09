@@ -14,5 +14,7 @@ phases:
       - terraform init
       - terraform validate 
       - terraform apply --auto-approve
-      - echo Terraform execution completed on $date
+     # If terraform folder from which build script will be executed contains variables.tfvar file, terraform apply command needs to include variables.tfvar This command will take all information inside variables.tfvar without requiting to provide variable names.
+     #- terraform apply -var-file=variables.tfvar --auto-approve
+      - echo "Terraform execution completed on `date`"
       
