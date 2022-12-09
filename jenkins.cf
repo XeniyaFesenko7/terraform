@@ -6,11 +6,11 @@ Parameters:
   VpcId:
     Type: String
     Description: VPC id
-    Default: "vpc-094de6c7c63b731c7"
+    Default: "vpc-0390e162f97bd352e"
   SubnetId:
     Type: String
     Description: Subnet in which to launch an EC2
-    Default: subnet-03efab732811c4fad
+    Default: subnet-0bd0726858fdf6790
   AvailabilityZone:
     Type: String
     Description: Availability Zone into which instance will launch
